@@ -16,7 +16,10 @@ class cls_wa_client {
         console.log(`starting wa ${this.id}`);
 
         this.client = new Client({
-            authStrategy: new LocalAuth({ clientId: `wa_${this.id}` })
+            authStrategy: new LocalAuth({ clientId: `wa_${this.id}` }),
+            puppeteer: {
+                args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            }
         });
 
         this.client.on('qr', (qr) => {

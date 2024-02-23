@@ -27,7 +27,7 @@ app.get('/initialize/:id', function (req, res) {
     wa_cls = new cls_wa_client(id=wa_id);
     wa_clients[wa_id] = wa_cls;
 
-    res.send(`wa client ${wa_cls.id} initialized`);
+    res.send({status: wa_cls.status});
 });
 
 app.get('/status/:id', function (req, res) {

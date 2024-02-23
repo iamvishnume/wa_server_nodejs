@@ -5,7 +5,7 @@ class cls_wa_client {
         this.STATUS_DISCONNECTED = "DISCONNECTED";
         this.STATUS_CONNECTED = "CONNECTED";
         this.STATUS_QR = "QR";
-        this.STATUS_PENDING = "PENDING";
+        this.STATUS_PENDING = "STARTING";
         this.STATUS_LOGGEDOUT = "LOGGEDOUT";
 
         this.DISCONNECT_REASON = null;

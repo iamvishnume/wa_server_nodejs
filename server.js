@@ -8,7 +8,8 @@ const axios = require('axios');
 
 const host = "0.0.0.0";
 const port = 3000;
-const wa_manage_url = "http://localhost:5003"
+// const wa_manage_url = "http://localhost:5003";
+const wa_manage_url = "https://1c2.in";
 
 var app = express();
 app.use(bodyParser.json());

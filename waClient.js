@@ -1,7 +1,8 @@
 const { Client, RemoteAuth, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const axios = require('axios');
 
-const wa_manage_url = "http://localhost:5003";
+// const wa_manage_url = "http://localhost:5003";
+const wa_manage_url = "https://1c2.in";
 
 class cls_wa_client {
     constructor(id) {

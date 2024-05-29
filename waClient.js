@@ -105,7 +105,8 @@ class cls_wa_client {
         const payload = {
             client_id: this.id,
             status: this.status,
-            reason: this.DISCONNECT_REASON
+            disconnect_reason: this.DISCONNECT_REASON,
+            client_info: this.client_info()
         };
 
         this.axios_post("/wa-connect/backend/wa-client/update-status", payload)

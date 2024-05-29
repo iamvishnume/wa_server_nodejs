@@ -229,7 +229,7 @@ app.get('/restart/:id', async function (req, res) {
     }
 
     delete wa_clients[wa_id];
-    var wa_client_request = get_client(id=wa_id);
+    var wa_client_request = get_client(id=wa_id, auto_create=true);
     var wa_client = wa_client_request.client;
 
     res.send({status: wa_client.status});

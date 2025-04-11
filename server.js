@@ -251,7 +251,7 @@ async function startup_run_wa_clients(){
     }
 
     client_list = client_list.data;
-    console.log(client_list);
+    console.table(client_list);
     client_list.forEach(client => {
         console.log(client);
         get_client(client.client_id, true);

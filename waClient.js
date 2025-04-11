@@ -16,6 +16,7 @@ class cls_wa_client {
 
         this.id = id;
         this.status = this.STATUS_PENDING;
+        this.qr_check = 0;
 
         console.log(`starting wa ${this.id}`);
 
@@ -37,6 +38,13 @@ class cls_wa_client {
             console.log('QR RECEIVED');
             this.QR = qr;
             this.update_status();
+            this.qr_check += 1;
+            if (this.qr_check > 5) {
+                console.log('QR code received multiple times. Ignoring...');
+                this.status = this.STATUS_DISCONNECTED;
+                this.destroy();
+                return;
+            }
         });
 
         this.client.on('ready', () => {
